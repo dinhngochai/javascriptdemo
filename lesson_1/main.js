@@ -21,14 +21,19 @@ setTimeout(function () {
 var accNumber = 3 ** 3;
 console.log(accNumber);
 
-// setInterval(function () {
-//     console.log('day la log so: ' + Math.random())
-// }, 3000);
+setInterval(function () {
+    console.log('day la log so: ' + Math.random())
+}, 3000);
+
+
+// Dùng dấu \ nếu muốn dùng dấu nháy " ở trong chuỗi string
+var specialVar = "Dinh \"Hai";
+console.log(specialVar);
 
 var fullName2 = 'Dinh Ngoc Hai';
-if(fullName2){
+if (fullName2) {
     console.log('dung');
 }
-else{
+else {
     console.log('sai');
 }
