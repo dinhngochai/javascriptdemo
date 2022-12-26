@@ -38,11 +38,6 @@ else {
     console.log('sai');
 }
 
-// Function
-var myFunction = function() {
-    alert('Hi, xin chao cac ban')
-}
-
 // Object Type
 var myObject = {
     name: 'Ngoc Hai',
@@ -59,3 +54,20 @@ var myArray = [
 ]
 console.log(myArray);
 console.log(typeof myArray);
+
+// Function
+var myFunction = function() {
+    alert('Hi, xin chao cac ban')
+}
+
+function myFunction1() {
+    alert('Day la ham 1');
+}
+myFunction1();
+console.log(typeof myFunction, typeof myFunction1);
+
+function callName(name1, name2){
+    alert('ten la: ' + name1);
+    alert('day la: '+ name2);
+}
+callName('hai');
