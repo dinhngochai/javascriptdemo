@@ -59,3 +59,23 @@ var myArray = [
 ]
 console.log(myArray);
 console.log(typeof myArray);
+
+
+// Declaration Function
+function showMessage(){
+    console.log('Declaration Function');
+}
+
+// Expression Function
+var showMessage2 = function(){
+    console.log('Expression Function 1');
+}
+
+setTimeout(function() {
+    console.log('Expression Function 2');
+}, 3)
+
+// Template String ES6 (Dung $ để tự nối chuỗi)
+var firstName = 'Hai';
+var LastName = 'Dinh';
+console.log('Toi La: ${firstName} ${LastName} ');
