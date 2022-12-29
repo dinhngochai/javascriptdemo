@@ -71,3 +71,8 @@ function callName(name1, name2){
     alert('day la: '+ name2);
 }
 callName('hai');
+
+// Vòng For of
+for (var param of arguments) {
+    
+}
