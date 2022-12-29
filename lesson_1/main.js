@@ -76,3 +76,60 @@ callName('hai');
 for (var param of arguments) {
     
 }
+
+// Declaration Function
+function showMessage(){
+    console.log('Declaration Function');
+}
+
+// Expression Function
+var showMessage2 = function(){
+    console.log('Expression Function 1');
+}
+
+setTimeout(function() {
+    console.log('Expression Function 2');
+}, 3)
+
+// Template String ES6 (Dung $ để tự nối chuỗi)
+var firstName = 'Hai';
+var LastName = 'Dinh';
+var myString = 'Toi hoc JS tai JS F8! JS';
+var spaceHeadEnd = '   Hai   '
+console.log('Toi La: ${firstName} ${LastName} ');
+
+// Length
+console.log(firstName.length);
+// cut string
+console.log(LastName.slice(1,3));
+console.log(LastName.slice(-3,-1));
+// Index
+console.log(firstName.indexOf('i'));
+//replace
+console.log(myString.replace('JS', 'JavaScript'));
+console.log(myString.replace(/JS/g, 'JavaS'));
+//Upper Case, Lower Case
+console.log(myString.toUpperCase());
+console.log(myString.toLowerCase());
+//Trim
+console.log(spaceHeadEnd.trim());
+//Spit: cắt 1 chuỗi biến hành array
+var languages = 'JavaScript, Java, PHP';
+var fullName3 = 'DinhNgochai';
+console.log(languages.split(', '));
+console.log(fullName3.split(''));
+// Get a char by index
+console.log(LastName.charAt(2));
+
+/// NUMBER
+
+// parseInt, parseFloat, toString
+console.log(Number.parseInt('10'));
+console.log(Number.parseInt(13.23));
+console.log(Number.parseInt('15 is my number'));
+
+console.log(Number.parseFloat(11));
+console.log(Number.parseFloat('17'));
+
+var exampleNumber = 19;
+console.log(exampleNumber.toString());
