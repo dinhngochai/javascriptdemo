@@ -73,8 +73,9 @@ function callName(name1, name2){
 callName('hai');
 
 // Vòng For of
-for (var param of arguments) {
-    
+var car = ['honda', 'suzuki', 'mini'];
+for (var param of car) {
+    console.log(param);
 }
 
 // Declaration Function
@@ -123,7 +124,7 @@ console.log(LastName.charAt(2));
 
 /// NUMBER
 
-// parseInt, parseFloat, toString
+// parseInt, parseFloat, toString, isFinite, isInteger
 console.log(Number.parseInt('10'));
 console.log(Number.parseInt(13.23));
 console.log(Number.parseInt('15 is my number'));
@@ -133,3 +134,8 @@ console.log(Number.parseFloat('17'));
 
 var exampleNumber = 19;
 console.log(exampleNumber.toString());
+
+var alpha = 'abc';
+var floatNumb = 0.2; var intNumb = 3;
+console.log(Number.isFinite(alpha), Number.isFinite(floatNumb));
+console.log(Number.isInteger(floatNumb), Number.isInteger(intNumb));
