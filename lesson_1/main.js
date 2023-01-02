@@ -122,6 +122,7 @@ console.log(fullName3.split(''));
 // Get a char by index
 console.log(LastName.charAt(2));
 
+console.log('====================================');
 /// NUMBER
 
 // parseInt, parseFloat, toString, isFinite, isInteger
@@ -139,3 +140,69 @@ var alpha = 'abc';
 var floatNumb = 0.2; var intNumb = 3;
 console.log(Number.isFinite(alpha), Number.isFinite(floatNumb));
 console.log(Number.isInteger(floatNumb), Number.isInteger(intNumb));
+// NaN la kieu so khong hop le, check NaN thi ta dung isNaN
+var resultNaN = 20 / 'abc';
+console.log(resultNaN,isNaN(resultNaN));
+
+console.log('================================');
+/// Mảng
+// toString, Join, Pop, Push, Shift, UnShift, Splicing, slicing, concat
+
+var languages1 = [
+    'javaScript',
+    'PHP',
+    'html',
+    'css'
+]
+var  languages2 = [
+    'Dart',
+    'Vader'
+]
+//join: chen giua cac phan tu trong mang 
+console.log(languages1.join('-'));
+//pop: xoa phan tu cuoi trong mang
+console.log(languages1.pop(), languages1);
+//shift: xoa phan tu dau trong mang
+console.log(languages1.shift(), languages1);
+console.log(languages1.unshift('Dinh'), languages1);
+//push: them 1 hoac nhieu gia tri vao mang
+console.log(languages1.push('nodeJS', 'Swing'), languages1);
+
+//splice: xoa mot phan tu tai vi tri bat ky
+console.log(languages1.splice(1,1), languages1);
+//splice: muon chen them 1 hoac nhieu phan tu vao vi tri bat ky hoặc vừa chèn vừa xoá
+console.log(languages1.splice(1, 1, 'Hai', 'Noah'), languages1);
+
+//concat: noi 2 mang lai voi nhau
+console.log(languages1.concat(languages2));
+
+//slice: cat mang
+console.log(languages1.slice(1,2));
+console.log(languages1.slice(-3, -1));
+
+console.log('==================================');
+/// Object Constructor
+// Lưu ý: Viết hoa chữ cái đầu để tạo Oj Constructor
+
+function User(firstName, lastName, avatar) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.avatar = avatar;
+    this.fullName = function getName() {
+        var name = this.firstName + ' ' + this.lastName;
+        return name;  // gọi 1 hàm trong 1 object, ta dùng this giống như để thay cho tên object mà chứa nó.
+}
+}
+var author = new User('Hai', 'Dinh', 'Ava');
+var student = new User('Nguyen', 'Vu', 'Ava');
+
+console.log(author);
+console.log(student);
+
+// thêm thuộc tính cho object
+author.title = 'Day la Thay Giao';
+student.chucVu = 'Con day la hoc sinh';
+console.log(author);
+console.log(student);
+console.log(author.fullName());
+console.log(student.fullName());
