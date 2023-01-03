@@ -188,7 +188,7 @@ function User(firstName, lastName, avatar) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.avatar = avatar;
-    this.fullName = function getName() {
+    this.getName = function() {
         var name = this.firstName + ' ' + this.lastName;
         return name;  // gọi 1 hàm trong 1 object, ta dùng this giống như để thay cho tên object mà chứa nó.
 }
@@ -204,5 +204,26 @@ author.title = 'Day la Thay Giao';
 student.chucVu = 'Con day la hoc sinh';
 console.log(author);
 console.log(student);
-console.log(author.fullName());
-console.log(student.fullName());
+console.log(author.getName());
+console.log(student.getName());
+
+// Object Prototype: dùng để thêm thuộc tính hoặc phương thức ở bên ngoài vào Object Constructor
+User.prototype.classname = 'F8';
+console.log(author.classname);
+User.prototype.getClassName = function() {
+    return this.classname;
+}
+console.log(student.getClassName());
+
+
+/// Đối tượng Date
+var date = new Date();
+
+var day = date.getDate();
+var month = date.getMonth() +1;
+var year = date.getFullYear();
+console.log(date);
+console.log('ngay: '+ day +' thang: '+ month +' nam: '+ year);
+
+// Tai lieu hoc: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
